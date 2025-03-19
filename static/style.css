@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url("IPL25.png") no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(2, 2, 2);
+}
+
+h1 {
+    margin-top: 20px;
+    color: goldenrod;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+label, select, input, button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background: #ffcc00;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.btn {
+    display: block;
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    text-decoration:none;
+    width: 150px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+h3 {
+    color: #ffcc00;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.text-container {
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+button{
+    background: #db952b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 16px;
+    transition: background 0.4s;
+}
+.team-box {
+    background: rgba(184, 179, 179, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 99%; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.small-button {
+    font-size: 16px;
+    padding: 8px 12px;
+    width: auto;
+}
+.footer-box {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+.alert-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(216, 133, 133, 0.3);
+    background: rgb(43, 42, 42);
+}
+
+.alert-box p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.alert-box button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #ffcc00;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.alert-box button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+a { text-decoration: none; }
