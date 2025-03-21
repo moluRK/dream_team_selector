@@ -68,7 +68,7 @@ IPL_Teams = {
 }
 
 for team in IPL_Teams:
-    for category in ["Batsmen", "Bowlers", "All-rounders", "Wicketkeepers"]:
+    for category in ["Batsmen", "Bowlers", "All-rounders", "Wicket-keepers"]:
         if category not in IPL_Teams[team]:
             IPL_Teams[team][category] = []  # Add empty list if category is missing
 
@@ -76,7 +76,7 @@ def generate_dream_teams(team1, team2, num_teams):
     dream_teams = []
     
     for _ in range(num_teams):
-        selected_players = { "Batsmen": [], "Bowlers": [], "All-rounders": [], "Wicketkeepers": [] }
+        selected_players = { "Batsmen": [], "Bowlers": [], "All-rounders": [], "Wicket-keepers": [] }
         used_players = set()
 
         # Function to select players while preventing repetition within the team
@@ -98,13 +98,13 @@ def generate_dream_teams(team1, team2, num_teams):
         selected_players["Batsmen"] = select_players("Batsmen", 3)
         selected_players["Bowlers"] = select_players("Bowlers", 3)
         selected_players["All-rounders"] = select_players("All-rounders", 3)
-        selected_players["Wicketkeepers"] = select_players("Wicketkeepers", 2)
+        selected_players["Wicketkeepers"] = select_players("Wicket-keepers", 2)
 
         # Ensureing exactly 11 players
         total_selected = sum(len(selected_players[cat]) for cat in selected_players)
 
         if total_selected < 11:
-            all_available = { "Batsmen": [], "Bowlers": [], "All-rounders": [], "Wicketkeepers": [] }
+            all_available = { "Batsmen": [], "Bowlers": [], "All-rounders": [], "Wicket-keepers": [] }
             
             # Collect all available players
             for category in all_available:
@@ -115,7 +115,7 @@ def generate_dream_teams(team1, team2, num_teams):
                 all_available[category] = [player for player in all_available[category] if player not in used_players]
 
             # Randomly shuffle category selection to ensure fair distribution
-            category_list = ["Batsmen", "Bowlers", "All-rounders", "Wicketkeepers"]
+            category_list = ["Batsmen", "Bowlers", "All-rounders", "Wicket-keepers"]
             random.shuffle(category_list)  # Shuffle the order of categories
 
             while total_selected < 11:
