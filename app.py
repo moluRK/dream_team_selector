@@ -3,71 +3,70 @@ import random
 
 app = Flask(__name__)
 
-# IPL Teams Database (Make sure all categories exist for every team)
+# IPL Teams Database:
 IPL_Teams = {
     "Chennai Super Kings": {
-        "Batsmen": ["Ruturaj Gaikwad", "Devon Conway", "Rahul Tripathi", "Shaik Rasheed"],
-        "Bowlers": ["Matheesha Pathirana", "Khaleel Ahmed", "Mukesh Choudhary", "Shreyas Gopal"],
-        "All-rounders": ["Ravindra Jadeja", "Shivam Dube", "Sam Curran", "Rachin Ravindra"],
-        "Wicket-keepers": ["MS Dhoni"]
+        "Batsmen": ["Ruturaj Gaikwad","Rachin Ravindra",  "Shivam Dube", "Rahul Tripathi","Deepak Hooda"," Vijay Shankar", "Andre Siddarth","Shaik Rasheed"],
+        "Bowlers": ["Matheesha Pathirana", "Noor Ahmed","Khaleel Ahmed","Anshul Kamboj","Nathan Ellis", "Mukesh Choudhary", "Shreyas Gopal","Gurjapneet Singh","KL Nagarkoti"],
+        "All-rounders": ["Ravindra Jadeja","Ravichandraran Ashwin","Sam Curran","Jamie Overton","Ramakrishna Ghosh"],
+        "Wicket-keepers": ["Deon Conway","MS Dhoni","V Bedi"]
     },
     "Delhi Capitals": {
-        "Batsmen": ["KL Rahul", "Tristan Stubbs", "Jake Fraser-McGurk", "Harry Brook", "Faf du Plessis", "Karun Nair"],
-        "Bowlers": ["Kuldeep Yadav", "Mitchell Starc", "T Natarajan", "Mukesh Kumar", "Mohit Sharma", "Dushmantha Chameera"],
+        "Batsmen": ["KL Rahul", "Tristan Stubbs", "Jake Fraser-McGurk", "Harry Brook","Abhishek Parel","Faf du Plessis","D Ferreira","Karun Nair"],
+        "Bowlers": ["Kuldeep Yadav", "Mitchell Starc", "T Natarajan", "Mukesh Kumar", "Mohit Sharma", "PVD Chameera"],
         "All-rounders": ["Axar Patel", "Ashutosh Sharma", "Sameer Rizvi", "Vipraj Nigam", "Madhav Tiwari", "Manvanth Kumar", "Tripurana Vijay", "Darshan Nalkande", "Ajay Mandal"],
-        "Wicket-keepers": ["Abishek Porel", "Donovan Ferreira"]
+        "Wicket-keepers": []
     },
     "Gujarat Titans": {
-        "Batsmen": ["Shubman Gill", "Kane Williamson", "Sai Sudharsan", "David Miller", "Abhinav Manohar", "Matthew Wade"],
-        "Bowlers": ["Mohammed Shami", "Alzarri Joseph", "Yash Dayal", "Pradeep Sangwan", "Rashid Khan", "R Sai Kishore", "Noor Ahmad"],
-        "All-rounders": ["Hardik Pandya", "Rahul Tewatia", "Vijay Shankar", "Jayant Yadav", "Odean Smith"],
-        "Wicket-keepers": ["Wriddhiman Saha", "Urvil Patel"]
+        "Batsmen": ["Shubman Gill", "JC Buttler", "SE Rutherford", "GD Phillips", "K Kushagra", "Anuj Rawat"],
+        "Bowlers": ["Mohammed Siraj", "K Rabada", "M Prasidh Krishna", "G Coetzee", "Gurnoor Brar", "I Sharma", "MJ Suthar","K Khejroliya","Rashid Khan"],
+        "All-rounders": ["B Sai Sudharsan", "M Shahrukh Khan", "R Tewatia", "Washington Sundar", "R Sai Kishor","MK Lomror","Arshad Khan","Karim Janat","J Yadav","N Sindu"],
+        "Wicket-keepers": []
     },
     "Kolkata Knight Riders": {
-        "Batsmen": ["Nitish Rana", "Venkatesh Iyer", "Shreyas Iyer", "Rinku Singh", "Mandeep Singh", "Jason Roy"],
-        "Bowlers": ["Lockie Ferguson", "Umesh Yadav", "Tim Southee", "Varun Chakravarthy", "Harshit Rana", "Kulwant Khejroliya"],
-        "All-rounders": ["Andre Russell", "Sunil Narine", "Shakib Al Hasan", "Anukul Roy", "David Wiese"],
-        "Wicket-keepers": ["Rahmanullah Gurbaz", "Litton Das"]
+        "Batsmen": ["Venktesh Iyer","Rinku Singh",  "Angkrish Raghuvanshi", "Roveman Powell", "Ajinkya Rahane","Manish Pandey"],
+        "Bowlers": ["Varun Chakravarthy","Harshit Rana","Spencer Johnson","Vaibhav Arora","Chetan Sakariya","Mayank Markande","Anrich Nortje","Umran malik*"],
+        "All-rounders": ["Sunil Narin", "Andre Russel", "Ramandeep Singh", "Moeen Ali","Ankul S Roy"],
+        "Wicket-keepers": ["Quinton de Kock","Rahmulla Gurbaaz", "Luvnith Sisodia"]
     },
     "Lucknow Super Giants": {
-        "Batsmen": ["Manan Vohra", "Deepak Hooda", "Ayush Badoni", "Karan Sharma", "Quinton de Kock"],
-        "Bowlers": ["Avesh Khan", "Mark Wood", "Mohsin Khan", "Ravi Bishnoi", "Jaydev Unadkat", "Yash Thakur"],
-        "All-rounders": ["Marcus Stoinis", "Krunal Pandya", "Kyle Mayers", "Daniel Sams", "Romario Shepherd"],
-        "Wicket-keepers": ["Nicholas Pooran"]
+        "Batsmen": ["RR Pant", "N Pooran", "DA Miller", "AK Markram", "MP Breetzke","Himmat Singh","A Juyal"],
+        "Bowlers": ["MP Yadav","Ravi Bishnoi","Avesh Khan","Akash Deep","Mohsin Khan","S Joseph","M Siddharth","DS Rathi","Prince Yadav","Akash Singh",],
+        "All-rounders": ["Abdul Samad","A Badoni","MR Marsh","Shahbaz Ahmed","AA Kulkarni","Y Chaudhary","RS Hangargekar"],
+        "Wicket-keepers": []
     },
     "Mumbai Indians": {
-        "Batsmen": ["Rohit Sharma", "Suryakumar Yadav", "Tilak Varma", "Dewald Brevis", "Ramandeep Singh"],
-        "Bowlers": ["Jasprit Bumrah", "Jofra Archer", "Jason Behrendorff", "Piyush Chawla", "Kumar Kartikeya", "Hrithik Shokeen"],
-        "All-rounders": ["Cameron Green", "Tim David", "Arjun Tendulkar", "Shams Mulani", "Nehal Wadhera"],
-        "Wicket-keepers": ["Ishan Kishan", "Vishnu Vinod"]
+        "Batsmen": ["Rohit Sharma", "Suryakumar Yadav","Tilak Varma","Rajat Angad Bawa","Bevpon Jacobs"],
+        "Bowlers": ["Jasprit Bumrah", "Trent Boult","Deepak Chahar", "Mujeeb-ur-Rahman","Karan Sharma", "Reece Topley", "Ashwani Kumar","Arjun Tendulkar","Vignesh Puthur"],
+        "All-rounders": ["Hardik Pandya","Naman Dhir","Will Jacks","Corbin Bosch","Mitchell Santner","S Raju"],
+        "Wicket-keepers": ["Ryan Rickelton","KL Shrijith","R Minz"]
     },
     "Punjab Kings": {
-        "Batsmen": ["Shikhar Dhawan", "Bhanuka Rajapaksa", "Shahrukh Khan", "Prabhsimran Singh", "Jitesh Sharma"],
-        "Bowlers": ["Kagiso Rabada", "Arshdeep Singh", "Rahul Chahar", "Harpreet Brar", "Nathan Ellis", "Baltej Singh"],
+        "Batsmen": ["SS Iyer", "N Wadhere","P Avinash","Harnoor Singh","Priyansh Arya"],
+        "Bowlers": ["Arshdeep Singh", "YS Chahal", "LH Ferguson", "V Vyshak", "Yash Thakur", "KR Sen","XC Bartlett",],
         "All-rounders": ["Liam Livingstone", "Sam Curran", "Rishi Dhawan", "Raj Bawa", "Atharva Taide"],
-        "Wicket-keepers": []
+        "Wicket-keepers": ["Josh Inglis","Prabhsimram Singh", "Vishnu Vinod"]
     },
     "Rajasthan Royals": {
-        "Batsmen": ["Sanju Samson", "Jos Buttler", "Yashasvi Jaiswal", "Devdutt Padikkal", "Shimron Hetmyer"],
-        "Bowlers": ["Trent Boult", "Prasidh Krishna", "Navdeep Saini", "Kuldeep Sen", "Yuzvendra Chahal", "KC Cariappa"],
-        "All-rounders": ["Ravichandran Ashwin", "Riyan Parag", "Jason Holder", "Donovan Ferreira", "Akash Vasisht"],
-        "Wicket-keepers": []
+        "Batsmen": ["Yashasvi Jaiswal","Shimron Hetmyer","Vaiibhav Suryavanshi","Shubham Dubey"],
+        "Bowlers": ["Jofra Archer", "Maheesh Theekshana", "Sandeep Sharma","Tushar Deshpande","Akash Madhwal","Fazalhaq Farooqi","Kumar Kartikeya",  "Kwena Maphaka","Ashok Sharma"],
+        "All-rounders": [ "Wanindu Hasaranga","Riyan Parag", "Nitish Rana", "Yudhvir Singh Charak"],
+        "Wicket-keepers": ["Sanju Samson","DC Jurel","KS Rathod"]
     },
     "Sunrisers Hyderabad": {
-        "Batsmen": ["Aiden Markram", "Abdul Samad", "Rahul Tripathi", "Mayank Agarwal", "Harry Brook"],
-        "Bowlers": ["Bhuvneshwar Kumar", "T Natarajan", "Umran Malik", "Kartik Tyagi", "Adil Rashid", "Mayank Markande"],
-        "All-rounders": ["Washington Sundar", "Marco Jansen", "Abhishek Sharma", "Akeal Hosein", "Samarth Vyas"],
-        "Wicket-keepers": ["Heinrich Klaasen", "Glenn Phillips"]
+        "Batsmen": ["Travish Head", "Kamindu Mendis","Abhinav Manohar", "Aniket VVerma","Atharava Taide","Sachin Baby"],
+        "Bowlers": ["Mohammed Shami", "Pat Cummins","Harshal Patel", "Adam Zampa","Rahul Chahar", "Simarjeet Singh", "Eshan Malinga", "Jaydev Unadkat","Zeeshan Ansari"],
+        "All-rounders": [ "Abhishek Sharma",  "K Nitish Kumar Reddy", "Wiaan Mulder"],
+        "Wicket-keepers": ["Heinrich Klaasen", "Ishan Kishan"]
     },
     "Royal Challengers Bangalore": {
-        "Batsmen": ["Virat Kohli", "Faf du Plessis", "Rajat Patidar", "Anuj Rawat", "Suyash Prabhudessai"],
-        "Bowlers": ["Mohammed Siraj", "Harshal Patel", "Josh Hazlewood", "Karn Sharma", "Akash Deep", "Reece Topley"],
-        "All-rounders": ["Glenn Maxwell", "Shahbaz Ahmed", "Wanindu Hasaranga", "Michael Bracewell", "Manoj Bhandage"],
-        "Wicket-keepers": ["Dinesh Karthik", "Finn Allen"]
+        "Batsmen": ["Virat Kohli", "Rajat Patidar","JG Bethell","D Padikkal","Swastik Chikara","Tim David",],
+        "Bowlers": ["Josh Hazlewood","Bhuvneshwar Kumar","Rasikh Salam","Yash Dayal","Suyash Sharma","Nuwan Thushra","L Ngidi","Abhinandan Singh"],
+        "All-rounders": ["LS Livingstone", "KH Pandya", "R Shepherd","Swapnil Singh","MS Bhandage","Mohut Rathee"],
+        "Wicket-keepers": ["PD Salt", "Jitesh Sharma"]
     }
 }
 
-# Ensure all teams have all categories (even if empty)
 for team in IPL_Teams:
     for category in ["Batsmen", "Bowlers", "All-rounders", "Wicketkeepers"]:
         if category not in IPL_Teams[team]:
@@ -101,7 +100,7 @@ def generate_dream_teams(team1, team2, num_teams):
         selected_players["All-rounders"] = select_players("All-rounders", 3)
         selected_players["Wicketkeepers"] = select_players("Wicketkeepers", 2)
 
-        # Ensure exactly 11 players, distributing extra players randomly across categories
+        # Ensureing exactly 11 players
         total_selected = sum(len(selected_players[cat]) for cat in selected_players)
 
         if total_selected < 11:
