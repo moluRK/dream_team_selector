@@ -94,8 +94,8 @@ def generate_dream_teams(team1, team2, num_teams):
             
             return selected
 
-        # Assign players by category
-        selected_players["Batsmen"] = select_players("Batsmen", <=1)
+        # Assign players by categoryline98
+        selected_players["Batsmen"] = select_players("Batsmen", )
         selected_players["Bowlers"] = select_players("Bowlers", )
         selected_players["All-rounders"] = select_players("All-rounders", )
         selected_players["Wicketkeepers"] = select_players("Wicket-keepers", )
