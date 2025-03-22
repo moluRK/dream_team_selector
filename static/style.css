@@ -40,13 +40,19 @@ button:hover {
     background: #ffaa00;
 }
 
-.team-card {
-    background: rgba(255, 255, 255, 0.2);
+.team-box {
+    background-image: url("team_card_bg.png") ;
+    background-size: cover;
     padding: 15px;
-    margin: 20px auto;
     border-radius: 10px;
-    width: 60%;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+    color: rgb(32, 32, 32); /* Ensure text is readable */
 }
+
 
 .btn {
     display: block;
@@ -81,7 +87,7 @@ form {
     max-width: 400px;
     margin: 20px auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    color: white;
+    color: rgb(29, 28, 28);
 }
 button{
     background: #db952b;
