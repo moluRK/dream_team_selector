@@ -95,10 +95,10 @@ def generate_dream_teams(team1, team2, num_teams):
             return selected
 
         # Assign players by category
-        selected_players["Batsmen"] = select_players("Batsmen", 3)
-        selected_players["Bowlers"] = select_players("Bowlers", 3)
-        selected_players["All-rounders"] = select_players("All-rounders", 3)
-        selected_players["Wicketkeepers"] = select_players("Wicket-keepers", 2)
+        selected_players["Batsmen"] = select_players("Batsmen", <=1)
+        selected_players["Bowlers"] = select_players("Bowlers", )
+        selected_players["All-rounders"] = select_players("All-rounders", )
+        selected_players["Wicketkeepers"] = select_players("Wicket-keepers", )
 
         # Ensureing exactly 11 players
         total_selected = sum(len(selected_players[cat]) for cat in selected_players)
