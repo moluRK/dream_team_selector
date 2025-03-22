@@ -6,26 +6,15 @@
     <title>IPL Dream Team Selector</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<div id="customAlert" class="alert-box">
-    <p>⚠️ Disclaimer: We are not responsible for any loss due to the generated teams.  
-         This tool generate team on our fixed data only!**.
-
-    Contact: "moluram3176@gmail.com" for any suggestions.</p>
-    
-       <label> 
-            I Agree<input  type="checkbox" 
-            id="agreeCheckbox"> 
+<body>
+    <div id="customAlert" class="alert-box">
+        <p>⚠️ Disclaimer: We are not responsible for any loss due to the generated teams. This tool generates teams based on fixed data only! Contact: "moluram3176@gmail.com" for any suggestions.</p>
+        <label>
+            I Agree <input type="checkbox" id="agreeCheckbox">
         </label>
         <button id="agreeButton" disabled>Continue</button>
-    
-</div>
+    </div>
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-<body>
     <h1>IPL Dream Team Selector</h1>
 
     <form action="/dream-team" method="POST">
@@ -52,6 +41,7 @@
     <div class="footer-box">
         <p>Made with ❤️ by Moluram Kushwaha</p>
     </div>
-    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
