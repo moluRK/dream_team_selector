@@ -36,16 +36,19 @@
             {% endfor %}
         </ul>
 
-        <h3>Wicketkeepers</h3>
+        <h3>Wicket-keepers</h3>
         <ul>
-            {% for player in team.players["Wicketkeepers"] %}
-                <li>{{ player }}</li>
-            {% endfor %}
+            {% if team.players["Wicket-keepers"] %}
+                {% for player in team.players["Wicket-keepers"] %}
+                    <li>{{ player }}</li>
+                {% endfor %}
+            {% else %}
+                <p>No players available</p>
+            {% endif %}
         </ul>
-
     </div>
     {% endfor %}
 
-    <a href="/"><button class="small-button">Generate Again</button></a>
+    <a href="/"><button class="small-button">Generate Again </button></a>
 </body>
 </html>
