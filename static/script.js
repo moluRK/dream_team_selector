@@ -9,13 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function () {
         loadingDiv.style.display = "block";
     });
-});
 
-function closeAlert() {
-    document.getElementById("customAlert").style.display = "none";
-}
-
-document.addEventListener("DOMContentLoaded", function () {
     const alertBox = document.getElementById("customAlert");
     const agreeCheckbox = document.getElementById("agreeCheckbox");
     const agreeButton = document.getElementById("agreeButton");
@@ -33,3 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alertBox.style.display = "none";
     });
 });
+
+function closeAlert() {
+    document.getElementById("customAlert").style.display = "none";
+}
