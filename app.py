@@ -12,16 +12,16 @@ IPL_Teams = {
         "Wicket-keepers": ["Deon Conway", "MS Dhoni", "V Bedi"]
     },
     "Delhi Capitals": {
-        "Batsmen": ["KL Rahul", "Tristan Stubbs", "Jake Fraser-McGurk", "Harry Brook", "Abhishek Parel", "Faf du Plessis", "D Ferreira", "Karun Nair"],
-        "Bowlers": ["Kuldeep Yadav", "Mitchell Starc", "T Natarajan", "Mukesh Kumar", "Mohit Sharma", "PVD Chameera", "Anrich Nortje", "Ishant Sharma"],
-        "All-rounders": ["Axar Patel", "Ashutosh Sharma", "Sameer Rizvi", "Vipraj Nigam", "Madhav Tiwari", "Manvanth Kumar", "Tripurana Vijay", "Darshan Nalkande", "Ajay Mandal"],
-        "Wicket-keepers": ["Rishabh Pant"]
+        "Batsmen": ["F du Plessis", "Tristan Stubbs", "Jake Fraser-McGurk", "Ashutosh Sharma", "Sameer Rizvi", "Faf du Plessis", "Karun Nair"],
+        "Bowlers": ["Kuldeep Yadav", "Mitchell Starc", "T Natarajan", "Dushmanth Chameera", "Mohit Sharma", "M Kumar", "D Nalkande", "T Vijay","V Nigam"],
+        "All-rounders": ["Axar Patel", "D Ferreira", "", "A Mandal",  "Manvanth Kumar L", "M Tiwari"],
+        "Wicket-keepers": ["KL Rahul","A Porel"]
     },
     "Gujarat Titans": {
-        "Batsmen": ["Shubman Gill", "JC Buttler", "SE Rutherford", "GD Phillips", "K Kushagra", "Anuj Rawat"],
-        "Bowlers": ["Mohammed Siraj", "K Rabada", "M Prasidh Krishna", "G Coetzee", "Gurnoor Brar", "I Sharma", "MJ Suthar", "K Khejroliya", "Rashid Khan"],
-        "All-rounders": ["B Sai Sudharsan", "M Shahrukh Khan", "R Tewatia", "Washington Sundar", "R Sai Kishor", "MK Lomror", "Arshad Khan", "Karim Janat", "J Yadav", "N Sindu"],
-        "Wicket-keepers": ["Wriddhiman Saha"]
+        "Batsmen": ["Shubman Gill","G Phillips","S Sudharsan","S Rurherford","M Lomar"],
+        "Bowlers": ["Mohammed Siraj", "K Rabada", "Prasidh Krishna", "G Coetzee", "R Sai Kishore", "I Sharma", "J Yadav", "K Khejroliya","G Brar Singh", "Rashid Khan"],
+        "All-rounders": ["S Khan, "R Tewatia", "Washington Sundar", "K Janat", "M Suthar", "N Sindhu", "A Khan"],
+        "Wicket-keepers": ["J Buttler","A Rawat","K Kushagra"]
     },
     "Kolkata Knight Riders": {
         "Batsmen": ["Venktesh Iyer", "Rinku Singh", "Angkrish Raghuvanshi", "Roveman Powell", "Ajinkya Rahane", "Manish Pandey"],
@@ -30,10 +30,10 @@ IPL_Teams = {
         "Wicket-keepers": ["Quinton de Kock", "Rahmulla Gurbaaz", "Luvnith Sisodia"]
     },
     "Lucknow Super Giants": {
-        "Batsmen": ["RR Pant", "N Pooran", "DA Miller", "AK Markram", "MP Breetzke", "Himmat Singh", "A Juyal"],
-        "Bowlers": ["MP Yadav", "Ravi Bishnoi", "Avesh Khan", "Akash Deep", "Mohsin Khan", "S Joseph", "M Siddharth", "DS Rathi", "Prince Yadav", "Akash Singh"],
-        "All-rounders": ["Abdul Samad", "A Badoni", "MR Marsh", "Shahbaz Ahmed", "AA Kulkarni", "Y Chaudhary", "RS Hangargekar"],
-        "Wicket-keepers": ["KL Rahul"]
+        "Batsmen": ["David Miller", "Mitchell Marsh", "Ayush Badini", "Abdul Samad", "Matthew Breetzke", "Himmat Singh"],
+        "Bowlers": ["M Yadav", "Ravi Bishnoi", "Avesh Khan", "Akash Deep", "Mohsin Khan", "S Joseph", "M Siddharth", "S Thakur", "Prince Yadav", "Akash Singh","R Hangargekar","D Singh"],
+        "All-rounders": ["Aiden Maekran", "S Ahmed", "A Kulkarni", "Yuvraj Chaudhary"],
+        "Wicket-keepers": ["Rishbh Pant","N Pooran","Aryan Juyal"]
     },
     "Mumbai Indians": {
         "Batsmen": ["Rohit Sharma", "Suryakumar Yadav", "Tilak Varma", "Rajat Angad Bawa", "Bevpon Jacobs"],
@@ -42,9 +42,9 @@ IPL_Teams = {
         "Wicket-keepers": ["Ryan Rickelton", "KL Shrijith", "R Minz"]
     },
     "Punjab Kings": {
-        "Batsmen": ["SS Iyer", "N Wadhere", "P Avinash", "Harnoor Singh", "Priyansh Arya"],
-        "Bowlers": ["Arshdeep Singh", "YS Chahal", "LH Ferguson", "V Vyshak", "Yash Thakur", "KR Sen", "XC Bartlett"],
-        "All-rounders": ["Liam Livingstone", "Sam Curran", "Rishi Dhawan", "Raj Bawa", "Atharva Taide"],
+        "Batsmen": ["S Iyer", "N Wadhere", "S Singh", "P Avinash", "Priyansh Arya","H Singh Pannu"],
+        "Bowlers": ["Arshdeep Singh", "Y Chahal", "L Ferguson", "V Vijaykumar", "H Brar", "Y Thakur", "XC Bartlett","K Sen","P Dubey"],
+        "All-rounders": ["G Maxwell","M Jansen","M Stonis","A Omarzai","A Hardie","M Khan", "S Shedge"],
         "Wicket-keepers": ["Josh Inglis", "Prabhsimran Singh", "Vishnu Vinod"]
     },
     "Rajasthan Royals": {
